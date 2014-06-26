@@ -1,0 +1,47 @@
+{
+  "resource": "Access Tokens",
+  "http_method": "POST",
+  "route": "/api/oauth/token.json",
+  "description": "Generating an access token",
+  "explanation": "        Before any API requests can be fulfilled a valid oauth access token must be requested. This token is required to be provided in the Authorization header as <code>Bearer [access_token]</code> for all other API requests.<br/><br/>\n        A Client ID and Secret Key will be issued for your specific client application which will be used to retrieve your token.<br/><br/>\n        If an unknown or invalid token is provided to any API request, a 401 status is returned with additional messaging.<br/><br/>\n",
+  "parameters": [
+    {
+      "required": true,
+      "name": "client_id",
+      "description": "Client ID (as provided)"
+    },
+    {
+      "required": true,
+      "name": "client_secret",
+      "description": "Client Secret (as provided)"
+    },
+    {
+      "required": true,
+      "Expected": "client_credentials",
+      "name": "grant_type",
+      "description": "Grant Type"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/oauth/token.json",
+      "request_body": "{\"client_id\":\"ed76da6a68dda8c08cf047ba2bb6efc4b68954ce7c8cb7f697dab3e74848bf83\",\"client_secret\":\"882dc99d1971589ea74390be04d32a926d7c67e58ddb8683d92236bb9125381a\",\"grant_type\":\"client_credentials\"}",
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"access_token\":\"684a867ac0faae326680cb642de78c0a097e6830350b8f47d2b8eed5338dcb21\",\"token_type\":\"bearer\",\"expires_in\":7200,\"refresh_token\":null,\"scope\":\"\"}",
+      "response_headers": {"Content-Type":"application/json; charset=utf-8","Cache-Control":"no-store","Pragma":"no-cache","ETag":"\"990747d7d337812e5014c730d1c67922\"","X-Request-Id":"86f83f85-b0e3-4e40-8d41-859b9f4bf829","X-Runtime":"0.093011","Content-Length":"155"},
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+}
+  ]
+}

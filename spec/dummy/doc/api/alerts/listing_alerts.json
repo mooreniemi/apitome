@@ -1,0 +1,52 @@
+{
+  "resource": "Alerts",
+  "http_method": "GET",
+  "route": "/api/1/alerts.json",
+  "description": "Listing alerts",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "page",
+      "description": "Page"
+    },
+    {
+      "Default": 10,
+      "name": "per_page",
+      "description": "Number of records per page"
+    },
+    {
+      "name": "types",
+      "description": "Array of types (if unspecified all types will be returned)"
+    },
+    {
+      "name": "since",
+      "description": "Limit alerts to a date/time in the past"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/1/alerts.json?per_page=2&types[]=a&types[]=type1&since=2013-09-03+00%3A23%3A32+UTC",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Bearer [access token]",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "per_page": "2",
+        "types[]": "type1",
+        "since": "2013-09-03 00:23:32 UTC"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"response\":[{\"id\":3,\"body\":\"It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\",\"types\":[\"a\",\"b\",\"c\"],\"created_at\":\"2013-09-04T00:23:32.964Z\"}],\"count\":1,\"pagination\":{\"previous\":null,\"next\":null,\"current\":1,\"per_page\":2,\"count\":1,\"pages\":1}}",
+      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","X-Api-Count":"1","X-Api-Pagination-Current":"1","X-Api-Pagination-Per-Page":"2","X-Api-Pagination-Count":"1","X-Api-Pagination-Pages":"1","Content-Length":"313","Content-Type":"application/json; charset=utf-8","ETag":"\"6f9d13c89336a9287509831111523a6e\"","Cache-Control":"max-age=0, private, must-revalidate","X-Request-Id":"79c00d5d-9fda-4e77-8e1c-7382d94fd55f","X-Runtime":"0.015473"},
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+}
+  ]
+}

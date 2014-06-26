@@ -1,0 +1,33 @@
+{
+  "resource": "Alerts",
+  "http_method": "GET",
+  "route": "/api/1/alerts/types.json",
+  "description": "Listing alert types",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/1/alerts/types.json",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Bearer [access token]",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"response\":[\"a\",\"b\",\"c\",\"type1\",\"type2\"],\"count\":5}",
+      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","X-Api-Count":"5","Content-Length":"52","Content-Type":"application/json; charset=utf-8","ETag":"\"a303749de6e2955f371d8fd965f71cfa\"","Cache-Control":"max-age=0, private, must-revalidate","X-Request-Id":"aeac1131-16aa-4dff-b996-e3ec81a0a956","X-Runtime":"0.041149"},
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+}
+  ]
+}

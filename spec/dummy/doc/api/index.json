@@ -1,0 +1,29 @@
+{
+  "resources": [
+    {
+      "name": "Access Tokens",
+      "examples": [
+        {
+          "description": "Generating an access token",
+          "link": "access_tokens/generating_an_access_token.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Alerts",
+      "examples": [
+        {
+          "description": "Listing alert types",
+          "link": "alerts/listing_alert_types.json",
+          "groups": "all"
+        },
+        {
+          "description": "Listing alerts",
+          "link": "alerts/listing_alerts.json",
+          "groups": "all"
+        }
+      ]
+    }
+  ]
+}
