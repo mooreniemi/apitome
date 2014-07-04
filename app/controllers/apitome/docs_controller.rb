@@ -16,8 +16,8 @@ class Apitome::DocsController < ActionController::Base
     params["path"].gsub!('-', '_')
     # collect all the example bodies
     resp = example["requests"].inject([]) {|a, e| a << e["response_body"]}
-    # give them back as json
-    respond_with(resp.to_json)
+    # return first response in case of index array
+    respond_with(resp.first)
   end
 
   private
